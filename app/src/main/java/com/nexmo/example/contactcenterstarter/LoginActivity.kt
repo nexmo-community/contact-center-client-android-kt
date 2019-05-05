@@ -59,7 +59,6 @@ class LoginActivity : BaseActivity() {
                 currentUser = user
 
                 startActivity(Intent(baseContext, MainActivity::class.java))
-                startActivity(Intent(baseContext, MainActivity::class.java))
                 finish()
             }
         })
