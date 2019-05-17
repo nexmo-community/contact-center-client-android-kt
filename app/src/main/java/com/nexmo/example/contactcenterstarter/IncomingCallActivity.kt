@@ -32,8 +32,6 @@ class IncomingCallActivity : BaseActivity() {
             override fun onSuccess(call: NexmoCall) {
                 startActivity(Intent(this@IncomingCallActivity, OnCallActivity::class.java))
                 finish()
-                call.myCallMember.member.channelData
-                call.myCallMember.member.channelType
             }
         })
     }

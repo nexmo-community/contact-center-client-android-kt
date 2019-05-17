@@ -26,12 +26,14 @@ class LoginActivity : BaseActivity() {
     }
 
     fun onLoginJaneClick(view: View) {
+        Toast.makeText(baseContext, "click login as jane!", Toast.LENGTH_LONG).show()
         loginToSdk(USER_NAME_JANE)
     }
 
-    fun onLoginJoeClick(view: View) {
-        loginToSdk(USER_NAME_JOE)
-    }
+
+//    fun onLoginJoeClick(view: View) {
+//        loginToSdk(USER_NAME_JOE)
+//    }
 
     private fun loginToSdk(username: String) {
         myApiService.getUserToken(UserTokenRequest(username)).enqueue(object : Callback<UserTokenResponse> {

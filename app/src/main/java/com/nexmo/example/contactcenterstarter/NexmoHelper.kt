@@ -1,5 +1,6 @@
 package com.nexmo.example.contactcenterstarter
 
+import android.app.Application
 import android.content.Context
 import android.util.Log
 import com.nexmo.client.NexmoCall
@@ -33,7 +34,7 @@ lateinit var contextRef: WeakReference<Context>
 private var didInit: Boolean = false
 
 fun init(appContext: Context) {
-    Log.d(TAG, "login, did init? " + didInit)
+    Log.d(TAG, "init, did init? " + didInit)
     if (didInit) {
         return
     }
@@ -47,5 +48,3 @@ val userName: String?
 
 val otherUserName: String?
     get() = if (currentUser?.name == USER_NAME_JANE) USER_NAME_JOE else USER_NAME_JANE
-
-

@@ -28,32 +28,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="8dp"
-            android:onClick="onInAppCallClick"
             android:padding="16dp"
             android:textColor="@color/black"
             android:text="Wait for an incoming call..." />
 
-        <TextView
-            android:id="@+id/tvOr1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="36dp"
-            android:text="Or"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        <!--<TextView-->
+            <!--android:id="@+id/tvOr1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="36dp"-->
+            <!--android:text="Or"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />-->
 
-        <Button
-            android:id="@+id/btnCallPhone"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_accent_stroke"
-            android:drawableRight="@drawable/ic_phone"
-            android:drawablePadding="8dp"
-            android:drawableTint="@color/black"
-            android:onClick="onPhoneCallClick"
-            android:padding="16dp"
-            android:textColor="@color/black"
-            android:text="Start a phone call" />
+        <!--<Button-->
+            <!--android:id="@+id/btnCallPhone"-->
+            <!--style="@style/Widget.AppCompat.Button.Borderless.Colored"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/round_accent_stroke"-->
+            <!--android:drawableRight="@drawable/ic_phone"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:drawableTint="@color/black"-->
+            <!--android:onClick="onPhoneCallClick"-->
+            <!--android:padding="16dp"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:text="Start a phone call" />-->
 
 
     </LinearLayout>

@@ -14,7 +14,6 @@ import com.nexmo.client.request_listener.NexmoApiError
 import com.nexmo.client.request_listener.NexmoRequestListener
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : BaseActivity() {
 
     val incomingCallListener = NexmoIncomingCallListener { call ->
@@ -51,15 +50,15 @@ class MainActivity : BaseActivity() {
         NexmoClient.get().addIncomingCallListener(incomingCallListener)
     }
 
-    fun onInAppCallClick(view: View) {
-        val callee = listOf(otherUserName)
-        NexmoClient.get().call(callee, NexmoCallHandler.IN_APP, callListener)
-    }
+//    fun onInAppCallClick(view: View) {
+//        val callee = listOf(otherUserName)
+//        NexmoClient.get().call(callee, NexmoCallHandler.IN_APP, callListener)
+//    }
 
-    fun onPhoneCallClick(view: View) {
-        val callee = listOf(PLACEHOLDER) //TODO: swap with your phone number
-        NexmoClient.get().call(callee, NexmoCallHandler.SERVER, callListener)
-    }
+//    fun onPhoneCallClick(view: View) {
+//        val callee = listOf(PLACEHOLDER) //TODO: swap with your phone number
+//        NexmoClient.get().call(callee, NexmoCallHandler.SERVER, callListener)
+//    }
 
     override fun onStop() {
         Log.d(TAG, "MainActivity - Stop")
