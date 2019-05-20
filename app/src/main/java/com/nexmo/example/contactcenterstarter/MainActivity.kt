@@ -55,10 +55,10 @@ class MainActivity : BaseActivity() {
 //        NexmoClient.get().call(callee, NexmoCallHandler.IN_APP, callListener)
 //    }
 
-//    fun onPhoneCallClick(view: View) {
-//        val callee = listOf(PLACEHOLDER) //TODO: swap with your phone number
-//        NexmoClient.get().call(callee, NexmoCallHandler.SERVER, callListener)
-//    }
+    fun onPhoneCallClick(view: View) {
+        val callee = listOf(PLACEHOLDER) //TODO: swap with your phone number
+        NexmoClient.get().call(callee, NexmoCallHandler.SERVER, callListener)
+    }
 
     override fun onStop() {
         Log.d(TAG, "MainActivity - Stop")
