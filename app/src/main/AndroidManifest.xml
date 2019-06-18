@@ -31,6 +31,9 @@
                 android:theme="@style/AppTheme.White" />
         <activity android:name=".OnCallActivity" />
         <activity android:name=".IncomingCallActivity" />
+        <activity android:name=".CallPhoneActivity"
+                  android:theme="@style/AppTheme.White">
+        </activity>
     </application>
 
 

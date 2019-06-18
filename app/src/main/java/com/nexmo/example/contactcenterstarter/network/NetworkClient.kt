@@ -9,16 +9,21 @@ import okhttp3.logging.HttpLoggingInterceptor
 
 var moshi = Moshi.Builder().build()
 
-val YOUR_BASE_URL = "https://britt-test-rails.herokuapp.com/"
-val YOUR_MOBILE_API_KEY = "1b47919fdcb9511eafbe4f35ed4a61c53c2144edd6a215d80a1a2b359b703312"
-
 val httpLogging = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 val httpClient = OkHttpClient.Builder().addInterceptor(httpLogging).build()
 
 var retrofit = Retrofit.Builder()
-    .baseUrl(YOUR_BASE_URL)
+    .baseUrl(getBaseUrl())
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .client(httpClient)
     .build()
+
+fun getBaseUrl(): String {
+    TODO("swap with your server base url, for example: \"https://xxxxxx.herokuapp.com/\"")
+}
+
+fun getMobileApiKey(): String {
+    TODO("swap with your mobile API key. Nexmo demo backend provides it on the SDK Integration page")
+}
 
 var myApiService = retrofit.create<MyApiService>(MyApiService::class.java)

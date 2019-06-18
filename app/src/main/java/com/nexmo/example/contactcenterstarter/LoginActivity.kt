@@ -2,6 +2,7 @@ package com.nexmo.example.contactcenterstarter
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 
@@ -26,28 +27,26 @@ class LoginActivity : BaseActivity() {
     }
 
     fun onLoginJaneClick(view: View) {
-        Toast.makeText(baseContext, "click login as jane!", Toast.LENGTH_LONG).show()
         loginToSdk(USER_NAME_JANE)
     }
 
 
-//    fun onLoginJoeClick(view: View) {
-//        loginToSdk(USER_NAME_JOE)
-//    }
+    fun onLoginJoeClick(view: View) {
+        loginToSdk(USER_NAME_JOE)
+    }
 
     private fun loginToSdk(username: String) {
         myApiService.getUserToken(UserTokenRequest(username)).enqueue(object : Callback<UserTokenResponse> {
             override fun onResponse(call: Call<UserTokenResponse>, response: Response<UserTokenResponse>) {
+                Toast.makeText(baseContext, "Got a JWT", Toast.LENGTH_LONG).show()
                 val token = response.body()?.jwt
                 token?.let { login(it) }
             }
 
             override fun onFailure(call: Call<UserTokenResponse>, t: Throwable) {
-                Toast.makeText(baseContext, "onFailure!", Toast.LENGTH_LONG).show()
+                Toast.makeText(baseContext, "Failed to receive a JWT", Toast.LENGTH_LONG).show()
             }
         })
-
-
     }
 
     private fun login(token: String) {

@@ -14,6 +14,7 @@ import com.nexmo.example.contactcenterstarter.TAG
 abstract class BaseActivity : AppCompatActivity() {
 
     private val CALL_PERMISSIONS_REQ = 121
+    val callsPermissions = arrayOf(android.Manifest.permission.READ_PHONE_STATE, android.Manifest.permission.RECORD_AUDIO, android.Manifest.permission.PROCESS_OUTGOING_CALLS)
 
     override fun onStart() {
         super.onStart()
@@ -44,9 +45,6 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-        private val callsPermissions = arrayOf(android.Manifest.permission.READ_PHONE_STATE, android.Manifest.permission.RECORD_AUDIO, android.Manifest.permission.PROCESS_OUTGOING_CALLS)
-    }
 
     fun notifyError(nexmoApiError: NexmoApiError) {
         Log.e(TAG, nexmoApiError.message)

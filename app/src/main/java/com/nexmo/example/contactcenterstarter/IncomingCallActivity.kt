@@ -10,16 +10,17 @@ import com.nexmo.client.NexmoCallEventListener
 import com.nexmo.client.getstarted.calls.BaseActivity
 import com.nexmo.client.request_listener.NexmoApiError
 import com.nexmo.client.request_listener.NexmoRequestListener
+import kotlinx.android.synthetic.main.activity_incoming_call.*
 
 class IncomingCallActivity : BaseActivity() {
 
     var callEventListener: NexmoCallEventListener = FinishOnCallEnd(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d(TAG, "Incoming - onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incoming_call)
 
+        tvTitle.text = currentCall?.myCallMember?.channel?.from?.data
         currentCall?.addCallEventListener(callEventListener)
     }
 
@@ -51,8 +52,6 @@ class IncomingCallActivity : BaseActivity() {
     }
 
     override fun onDestroy() {
-        Log.d(TAG, "Incoming - onDestroy")
-
         currentCall?.removeCallEventListener(callEventListener)
         super.onDestroy()
     }

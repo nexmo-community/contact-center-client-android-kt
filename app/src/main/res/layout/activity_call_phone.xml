@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+    <EditText android:layout_width="0dp"
+              tools:text="09898787764"
+              android:focusable="false"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvPhoneNumber"
+              android:lines="1"
+              android:padding="36dp"
+              android:background="@null"
+              android:cursorVisible="false"
+              android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+              app:layout_constraintBottom_toTopOf="@+id/keypad" app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@id/btnErase"
+              app:layout_constraintHorizontal_bias="0.5" app:layout_constraintVertical_chainStyle="packed"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/keypad"
+            android:layout_width="0dp"
+            android:paddingTop="20dp"
+            android:layout_height="400dp"
+            app:constraint_referenced_ids="dial1,dial2,dial3,dial4,dial5,dial6,dial7,dial8,dial9,dialStar,dial0,dialHash"
+            app:flow_maxElementsWrap="3"
+            app:flow_wrapMode="aligned"
+            android:elevation="2dp"
+            app:flow_verticalStyle="spread"
+            app:flow_horizontalStyle="spread"
+            app:flow_verticalBias="0"
+            app:flow_horizontalBias="0"
+            app:layout_constraintBottom_toTopOf="@+id/fabCall"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber" app:layout_constraintHorizontal_bias="0.5">
+
+    </androidx.constraintlayout.helper.widget.Flow>
+    <ImageView
+            android:id="@+id/dial1"
+            android:scaleType="centerInside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dial_one"
+            android:padding="24dp"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+
+    <ImageView
+            android:id="@+id/dial2"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_two"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:padding="24dp"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+
+    <ImageView
+            android:id="@+id/dial3"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_three"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+
+    />
+
+    <ImageView
+            android:id="@+id/dial4"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_four"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+
+    <ImageView
+            android:id="@+id/dial5"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_five"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+    <ImageView
+            android:id="@+id/dial6"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_six"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+    <ImageView
+            android:id="@+id/dial7"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_seven"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+
+    />
+    <ImageView
+            android:id="@+id/dial8"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_eight"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+    <ImageView
+            android:id="@+id/dial9"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_nine"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+
+    <ImageView
+            android:id="@+id/dial0"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_zero"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+    />
+
+
+    <ImageView
+            android:id="@+id/dialStar"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_star"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+
+    />
+
+
+    <ImageView
+            android:id="@+id/dialHash"
+            android:padding="24dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/dial_hash"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:background="?selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/keypad" app:layout_constraintStart_toEndOf="@+id/dial0"
+            android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="24dp"
+            app:srcCompat="@drawable/ic_keypad_erase"
+            android:id="@+id/btnErase"
+            android:onClick="onErase"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPhoneNumber"
+            app:layout_constraintTop_toTopOf="@+id/tvPhoneNumber"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginEnd="8dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fabCall"
+            android:onClick="onCallPhoneClick"
+            android:src="@drawable/ic_phone"
+            android:background="@color/green"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keypad" app:layout_constraintHorizontal_bias="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

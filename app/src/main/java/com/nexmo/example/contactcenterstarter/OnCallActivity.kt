@@ -11,7 +11,7 @@ import com.nexmo.client.request_listener.NexmoRequestListener
 
 class OnCallActivity : BaseActivity() {
 
-    internal var callEventListener: NexmoCallEventListener = FinishOnCallEnd(this)
+    var callEventListener: NexmoCallEventListener = FinishOnCallEnd(this)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,6 @@ class OnCallActivity : BaseActivity() {
     }
 
     override fun onStart() {
-        Log.d(TAG, "OnCallActivity - Start")
         super.onStart()
         currentCall?.addCallEventListener(callEventListener)
     }
@@ -41,7 +40,6 @@ class OnCallActivity : BaseActivity() {
 
 
     override fun onStop() {
-        Log.d(TAG, "OnCallActivity - Stop")
         currentCall?.removeCallEventListener(callEventListener)
         super.onStop()
     }

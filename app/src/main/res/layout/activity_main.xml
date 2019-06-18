@@ -1,46 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="48dp">
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|start"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:text="Hi, Britt!" />
-
-
-    <LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center">
 
-        <TextView
+
+    <TextView
             android:id="@+id/tvWait"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="8dp"
             android:padding="16dp"
             android:textColor="@color/black"
-            android:text="Wait for an incoming call..." />
-
-        <TextView
+            android:text="Wait for an incoming call..."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvOr1" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintHorizontal_bias="0.0" android:gravity="center"/>
+    <TextView
             android:id="@+id/tvOr1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="36dp"
             android:text="Or"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintTop_toBottomOf="@+id/tvWait"
+            app:layout_constraintBottom_toTopOf="@+id/btnCallPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_margin="16dp"/>
 
-        <Button
+    <Button
             android:id="@+id/btnCallPhone"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
@@ -52,9 +46,12 @@
             android:onClick="onPhoneCallClick"
             android:padding="16dp"
             android:textColor="@color/black"
-            android:text="Start a phone call" />
+            android:text="Start a phone call"
+            app:layout_constraintTop_toBottomOf="@+id/tvOr1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toBottomOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:capitalize="words"/>
 
 
-    </LinearLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
