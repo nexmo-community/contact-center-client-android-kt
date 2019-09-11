@@ -27,7 +27,7 @@ class CallPhoneActivity : BaseActivity() {
             notifyError(nexmoApiError)
         }
 
-        override fun onSuccess(call: NexmoCall) {
+        override fun onSuccess(call: NexmoCall?) {
             currentCall = call
 
             val intent = Intent(this@CallPhoneActivity, OnCallActivity::class.java)
@@ -62,7 +62,7 @@ class CallPhoneActivity : BaseActivity() {
 
 
     fun onCallPhoneClick(v: View) {
-        val callee = listOf(tvPhoneNumber.text.toString())
+        val callee = tvPhoneNumber.text.toString()
         NexmoClient.get().call(callee, NexmoCallHandler.SERVER, callListener)
     }
 
