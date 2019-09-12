@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.nexmo.example.contactcenterstarter"
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -32,9 +32,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.android.material:material:1.0.0'
 
-
-    implementation 'com.nexmo.android:client-sdk:0.3.0'
-
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation "com.squareup.retrofit2:converter-moshi:2.5.0"
     implementation 'com.squareup.moshi:moshi:1.8.0'
@@ -44,4 +41,5 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
 
+    implementation 'com.nexmo.android:client-sdk:1.0.0'
 }

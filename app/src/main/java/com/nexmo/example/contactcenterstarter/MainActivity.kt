@@ -18,8 +18,6 @@ import android.content.Context.INPUT_METHOD_SERVICE
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat.getSystemService
 
-
-
 class MainActivity : BaseActivity() {
 
     val incomingCallListener = NexmoIncomingCallListener { call ->

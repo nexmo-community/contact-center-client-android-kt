@@ -24,6 +24,7 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         init(applicationContext)
+
     }
 
     fun onLoginJaneClick(view: View) {
@@ -56,7 +57,7 @@ class LoginActivity : BaseActivity() {
                 notifyError(nexmoApiError)
             }
 
-            override fun onSuccess(user: NexmoUser) {
+            override fun onSuccess(user: NexmoUser?) {
                 currentUser = user
 
                 startActivity(Intent(baseContext, MainActivity::class.java))

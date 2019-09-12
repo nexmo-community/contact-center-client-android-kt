@@ -30,7 +30,7 @@ class IncomingCallActivity : BaseActivity() {
                 notifyError(nexmoApiError)
             }
 
-            override fun onSuccess(call: NexmoCall) {
+            override fun onSuccess(call: NexmoCall?) {
                 startActivity(Intent(this@IncomingCallActivity, OnCallActivity::class.java))
                 finish()
             }
@@ -43,7 +43,7 @@ class IncomingCallActivity : BaseActivity() {
                 notifyError(nexmoApiError)
             }
 
-            override fun onSuccess(call: NexmoCall) {
+            override fun onSuccess(call: NexmoCall?) {
                 startActivity(Intent(this@IncomingCallActivity, OnCallActivity::class.java))
                 finish()
             }
