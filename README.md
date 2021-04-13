@@ -1,3 +1,5 @@
+## ⚠️ This repository is no longer maintained. 
+
 # contact-center-android
 
 This project is a demo application for Build Your Contact Center guide. 
